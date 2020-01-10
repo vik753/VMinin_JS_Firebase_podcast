@@ -5,11 +5,13 @@ import './styles.css';
 const form = document.getElementById('form');
 const input = form.querySelector('#question-input');
 const submitBtn = form.querySelector('#submit');
-
+// loading question list from local storage when page loaded/reloaded
+window.addEventListener('load', Question.renderList);
+// moderate input text and submit button
 input.addEventListener('input', () => {
     submitBtn.disabled = !isValid(input.value.trim());
 });
-
+// form worker
 const submitFormHandler = (e) => {
     e.preventDefault();
 
@@ -24,7 +26,6 @@ const submitFormHandler = (e) => {
         Question.create(question).then(() => {
             input.value = '';
             input.className = '';
-            submitBtn.disabled = false;
         });
     }
 };

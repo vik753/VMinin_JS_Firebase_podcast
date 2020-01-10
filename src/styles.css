@@ -23,7 +23,7 @@ button {
  */
 
 #sidebar {
-    background-color: #2196F3;
+    background-color: #2d72ff;
     padding: 15px;
 }
 
@@ -50,4 +50,10 @@ button {
 
 .author {
     font-size: 0.8rem;
+}
+
+.all-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
 }
