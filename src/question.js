@@ -46,7 +46,12 @@ export class Question {
         return questions.length ? `
         <ol>
             ${questions.map(question =>
-            `<li>${question.text}</li>`)
+            `<li>${question.text} 
+                (
+                ${new Date(question.date).toLocaleDateString()} : 
+                ${new Date(question.date).toLocaleTimeString()}
+                )
+            </li>`)
             .join('')}
         </ol>
         ` : '<p>No any questions</p>'

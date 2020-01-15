@@ -19,7 +19,7 @@ const getAuthForm = () => {
     `;
 };
 
-// google: firebase auth rest
+// google: firebase auth Rest API
 const authWithEmailAndPassword = (email, password) => {
     const apiKey = 'AIzaSyCIHh8UN5TwHeFgaXzRZl13HHCSVhxtyqw';
     return fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`,
